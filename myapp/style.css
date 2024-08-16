@@ -1,0 +1,318 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles for dark theme */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar .logo img {
+    max-width: 80px;
+    shape-outside: margin-box;
+    height: auto;
+}
+
+.navbar .navbar-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-item {
+    margin-right: 20px;
+}
+
+.navbar .navbar-item:last-child {
+    margin-right: 0;
+}
+
+.navbar .navbar-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .navbar-item a:hover {
+    background-color: #4c00ff;
+}
+
+/* Dropdowns */
+.language-dropdown,
+.laws-dropdown,
+.rights-dropdown,
+.login-dropdown,
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Apply hover effect to show dropdown content */
+.language-dropdown:hover .language-dropdown-content,
+.laws-dropdown:hover .laws-dropdown-content,
+.rights-dropdown:hover .rights-dropdown-content,
+.login-dropdown:hover .login-dropdown-content,
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language-dropdown-content,
+.laws-dropdown-content,
+.rights-dropdown-content,
+.login-dropdown-content,
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    width: auto; /* Set a fixed width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0;
+    top: 100%;
+}
+
+/* Dropdown content styles */
+.language-dropdown-content a,
+.laws-dropdown-content a,
+.rights-dropdown-content a,
+.login-dropdown-content a,
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+/* Make dropdown options display vertically */
+.language-dropdown-content,
+.laws-dropdown-content,
+.rights-dropdown-content,
+.login-dropdown-content,
+.dropdown-content {
+    display: block;
+}
+
+/* Hover effect for dropdown options */
+.language-dropdown-content a:hover,
+.laws-dropdown-content a:hover,
+.rights-dropdown-content a:hover,
+.login-dropdown-content a:hover,
+.dropdown-content a:hover {
+    background-color: rgb(43, 0, 255);
+}
+
+/* Style the drop-down menu */
+.dropbtn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* Centered Search Bar */
+.centered-search-bar {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.centered-search-bar input[type="text"],
+.centered-search-bar button.search-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.centered-search-bar input[type="text"]::placeholder {
+    color: #888;
+}
+
+/* Banners */
+.banner-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.banner .banner-item {
+    flex: 0 0 50%;
+    text-align: center;
+    padding: 50px;
+    background-color: #333;
+    transition: transform 0.5s;
+}
+
+.banner .banner-item h2 {
+    font-size: 24px;
+    color: #6200ff;
+}
+
+.banner .banner-item p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Animation for banners */
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.banner.animate .banner-item {
+    animation: scrollBanner 10s linear infinite;
+}
+
+/* Centered Photos */
+.low-end-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.low-end-section .image {
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+.low-end-section .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.low-end-section .image .transparent-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.low-end-section .image:hover .transparent-block {
+    opacity: 1;
+}
+
+/* Feedback Section */
+.feedback-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #333;
+    max-width: 600px;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease;
+}
+
+.feedback-section h2 {
+    font-size: 24px;
+    color: #6200ff;
+    margin-bottom: 10px;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.feedback-section form {
+    margin-top: 20px;
+}
+
+.feedback-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    resize: none;
+}
+
+.feedback-section textarea::placeholder {
+    color: #888;
+}
+
+.feedback-section button[type="submit"] {
+    background-color: #2200ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-section button[type="submit"]:hover {
+    background-color: #6a00ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    padding: 20px 0;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animation for feedback section */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.a{ 
+    
+    padding-left: 200px;
+    font-size: 50px;
+    
+}
